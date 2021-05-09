@@ -115,20 +115,21 @@ const $mainContainer = document.getElementById('main');
     // })
 // })
 window.addEventListener('load', () => {
-        const view = `
-        
-            ${nc.map((nerve) => `
-                <div class="container">
-                    <a href="./pages/nerve${nerve.id}.html">
-                        <h1>${nerve.name}</h1>
-                        <h2>${nerve.number}</h2>
-                        <h2>${nerve.type}</h2>
-                        <h2>${nerve.function}</h2>
-                        <h2>${nerve.origin}</h2>
-                    </a>
-                </div>
-                ` ).join('')
-            }
+        const view = `        
+            <div class="centerer">
+                ${nc.map((nerve) => `
+                    <div class="container">
+                        <a href="./pages/nerve${nerve.id}.html">
+                            <h1>${nerve.name}</h1>
+                            <h2>${nerve.number}</h2>
+                            <h2>${nerve.type}</h2>
+                            <h2>${nerve.function}</h2>
+                            <h2>${nerve.origin}</h2>
+                        </a>
+                    </div>
+                    ` ).join('')
+                }
+            </div>
     `;
     $mainContainer.innerHTML = view;
 })
